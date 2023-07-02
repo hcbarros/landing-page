@@ -4,7 +4,6 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #000;
 }
 
 header {
@@ -44,18 +43,21 @@ main {
 }
 
 .block-one {
-    margin-top: 100px;
+    padding-top: 162px;
+    background-color: #1F2937;
+    height: 114px;
 }
 
 .block-one > div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .text-block-one > div:first-child {
     font-size: 48px;
-    font-weight: 900    ;
+    font-weight: 900;
     color: #F9FAF8;    
 }
 
@@ -76,10 +78,27 @@ main {
     margin-top: 13px;
     height: 38px;
     width: 127px;
+    cursor: pointer;
 }
 
-.text-block-one, .block-one img {
+.text-block-one, .img-block-one {
     width: 34%;
+    height: 228px;
+}
+
+.img-block-one {
+    background-color: #777;
+}
+
+.img-block-one img {
+    width: 100%;
+}
+
+.img-block-one img[alt] {
+    display: flex;
+    text-align: center;
+    color: #E5E7EB;
+    font-size: 18px;
 }
 
 .block-two {
@@ -88,7 +107,7 @@ main {
     flex-direction: column;
     width: 100%;
     height: 500px;
-    margin-top: 150px;
+    margin-top: 200px;
     background-color: #fff;
 }
 
@@ -120,4 +139,30 @@ main {
     text-align: center;
     color: #555;
     font-size: 18px;
+}
+
+.block-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    background-color: #E5E7EB;
+}   
+
+.block-three > div:first-child {
+    width: 50%;
+    color: #1F2937;
+}
+
+.block-three > div:first-child > div:first-child {
+    font-size: 37px;   
+    font-weight: 300; 
+    font-style: italic;
+}   
+
+.block-three > div:first-child > div:nth-child(2) {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 900;
 }
