@@ -24,13 +24,15 @@ header > div:first-child {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 68%;
+    width: 1030px;
+    margin-inline: 30px;
 }
 
 .logo-text {
     font-size: 24px;
     color: #F9FAF8;
     font-weight: 900;
+    margin-right: 30p;
 }
 
 .header-link {
@@ -43,16 +45,20 @@ main {
 }
 
 .block-one {
-    padding-top: 162px;
-    background-color: #1F2937;
-    height: 114px;
+    padding-top: 105px;
+    min-height: 114px;
+    height: 100%;
+    margin-inline: 30px;
+    max-height: 1000px;
 }
 
 .block-one > div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 114px;
     height: 100%;
+    max-height: 1000px;
 }
 
 .text-block-one > div:first-child {
@@ -82,17 +88,18 @@ main {
 }
 
 .text-block-one, .img-block-one {
-    width: 34%;
-    height: 228px;
+    width: 515px;
+    min-height: 228px;
 }
 
 .img-block-one {
     background-color: #777;
     overflow: hidden;
+    width: 515px;
 }
 
 .img-block-one img {
-    width: 100%;
+    width: 515px;
 }
 
 .img-block-one img[alt] {
@@ -105,10 +112,13 @@ main {
 .block-two {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 500px;
-    margin-top: 200px;
+    min-height: 500px;
+    height: 100%;
+    max-height: 2000px;
+    margin-top: 140px;
     background-color: #fff;
 }
 
@@ -124,7 +134,8 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-    width: 55%;
+    width: 833px;
+    margin-bottom: 50px;
 }
 
 .square {
@@ -133,6 +144,10 @@ main {
     border: 4px #3882F6 solid;
     border-radius: 15px;
     overflow: hidden;
+}
+
+.square img {
+    height: 160px;
 }
 
 .text-square {
@@ -148,13 +163,17 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    min-height: 440px;
+    height: 100%;
+    max-height: 2000px;
+    padding-block: 30px;
     background-color: #E5E7EB;
 }   
 
 .block-three > div:first-child {
     width: 50%;
     color: #1F2937;
+    height: 100%;
 }
 
 .block-three > div:first-child > div:first-child {
@@ -174,7 +193,10 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 350px;
+    min-height: 290px;
+    height: 100%;
+    max-height: 1000px;
+    padding-block: 30px;
     background-color: #fff;
     color: #F9FAF8;
 }   
@@ -183,9 +205,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 68%;
-    height: 150px;
+    width: 670px;
+    min-height: 110px;
+    height: 100%;
+    max-height: 1000px;
     background-color: #3882F6;
+    margin: 20px;
+    padding: 20px;
     border-radius: 8px;        
 }
 
@@ -200,7 +226,9 @@ main {
 }
 
 .block-four button {
-    height: 38px;
+    min-height: 38px;
+    height: 100%;
+    max-height: 200px;
     width: 130px;
     border-radius: 8px;
     background-color: transparent;
@@ -220,4 +248,33 @@ footer {
     height: 100px;
     font-size: 18px;
     color: #E5E7EB;
+}
+
+
+@media (max-width: 1100px) {
+    .img-block-one {
+        width: 46vw
+    }
+}
+
+@media (max-width: 900px) {
+    .squares {
+        display: grid;
+        width: 90%;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}   
+
+@media (max-width: 700px) {
+    .block-one > div:first-child {
+        flex-direction: column;
+    }
+    .text-block-one {   
+        margin-bottom: 30px;
+    }
+    .text-block-one, .img-block-one {
+        width: calc(70vw + 20px);
+    }
+
 }
